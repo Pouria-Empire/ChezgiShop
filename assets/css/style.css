@@ -1,0 +1,51 @@
+.cards_class{
+    padding: 2% 8%;
+    
+}
+.card-body{
+    text-align: center;
+}
+.each_card{
+    padding: 2%;
+    text-align: right;
+}
+.pricing{
+    color: rgb(81, 8, 95);
+}
+.btn-primary{
+    background-color: rgb(81, 8, 95);
+}
+.each_image{
+    width: 150px;
+    height: 150px;
+}
+.icon{
+    color: #470347;
+    margin: 1rem;
+}
+.icon:hover{
+    color: #85099e;
+}
+.text_in_bottom{
+    background-color: #808080;
+    text-align: center;
+    color: black;
+}
+h5{
+    font-family: "BTitr";
+    font-size: medium;
+    padding: 7% 5%;
+}
+ul{
+    text-align: right;
+    color: black;
+}
+#features{
+    text-align: center;
+    padding: 5% 15%;
+    background-color: rgb(243 226 147);
+}
+#titleBox{
+    font-family: "BTitr";
+}
+

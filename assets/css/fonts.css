@@ -1,0 +1,20 @@
+@font-face {
+    font-family: 'BTitr';
+    src: url('BTitr.eot');
+    src: url('BTitr.eot?#iefix') format('embedded-opentype'),
+         url('BTitr.woff') format('woff'),
+         url('BTitr.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+nav {
+    font-family: 'BTitr', sans-serif !important;
+    font-size: medium;
+}
+
+.backNav{
+    background-color: rgb(60, 8, 71);
+}
+/* body{
+    background-color: blue;
+} */

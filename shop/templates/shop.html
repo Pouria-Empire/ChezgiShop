@@ -1,0 +1,93 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+    فروشگاه
+{% endblock title %}
+
+{% block custom_data %}
+    <!-- slider -->
+    <div class="container" style="background-color: #fff">
+        <div class="row">
+            <div class="col-md">
+                <div id="demo" class="carousel slide ml-auto align-self-center" data-ride="carousel">
+
+                    <!-- Indicators -->
+                    <ul class="carousel-indicators bg-dark">
+                        <li data-target="#demo" data-slide-to="0" class="active"></li>
+                        <li data-target="#demo" data-slide-to="1"></li>
+                        <li data-target="#demo" data-slide-to="2"></li>
+                    </ul>
+
+                    <!-- The slideshow -->
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="{% static '1.jpg' %}" alt="Los Angeles" width="1150" height="450">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="{% static '2.jpg' %}" alt="Chicago" width="1150" height="450">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="{% static '3.jpg' %}" alt="New York" width="1150" height="450">
+                        </div>
+                    </div>
+
+                    <!-- Left and right controls -->
+                    <a class="carousel-control-prev" href="#demo" data-slide="prev">
+                        <span class="carousel-control-prev-icon bg-dark"></span>
+                    </a>
+                    <a class="carousel-control-next" href="#demo" data-slide="next">
+                        <span class="carousel-control-next-icon bg-dark"></span>
+                    </a>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+    <!-- features -->
+    <section id="features">
+
+        <div class="row">
+            <div class="feature-box col-sm-4">
+                <i class="icon fas fa-ring fa-4x"></i>
+                <h3 id="titleBox">بیشترین تنوع انگشتر</h3>
+                <p>بیش از ۲۳۰۰ نوع</p>
+            </div>
+
+            <div class="feature-box col-sm-4">
+                <i class="icon fas fa-cart-plus fa-4x"></i>
+                <h3 id="titleBox">امکان ارسال پستی</h3>
+                <p>ارسال پستی به سراسر نقاط کشور</p>
+            </div>
+
+            <div class="feature-box col-sm-4">
+                <i class="icon fas fa-calendar-check fa-4x"></i>
+                <h3 id="titleBox">ضمانت</h3>
+                <p>ضمانت ۹۹ ساله</p>
+            </div>
+        </div>
+
+    </section>
+    <br>
+    <div id="app">
+        <div class="row cards_class">
+            {% for product in all_products %}
+                <div class="col-sm-4 each_card">
+                    <div class="card">
+                        <div class="card-body">
+                            <img class="card-img-top each_image" src="../{{ product.image }}" alt="{{ product.title }}">
+                            <h4 class="card-title">{{ product.title }}</h4>
+                            <h5 class="pricing">تومان{{ product.price }}</h5>
+                            <p class="card-text">{{ product.description }}</p>
+                            <a href="#" class="btn btn-primary">افزودن به سبد خرید</a>
+                        </div>
+                    </div>
+                </div>
+
+            {% endfor %}
+        </div>
+
+        <!-- here is where our products might added by js -->
+    </div>
+{% endblock custom_data %}
